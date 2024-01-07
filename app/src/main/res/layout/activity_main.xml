@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/Heading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="272dp"
+        android:fontFamily="sans-serif-black"
+        android:text="RentMe"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="78sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Heading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="272dp"
+        android:fontFamily="sans-serif-black"
+        android:text=".lk"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="78sp"
+        app:layout_constraintStart_toEndOf="@+id/Heading1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="YOUR JOURNEY, OUR WHEELS"
+        android:textColor="#C8FFF9F9"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Heading1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/slogan"
+        tools:layout_editor_absoluteX="0dp">
+
+        <View
+            android:layout_width="130dp"
+            android:layout_height="30dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/Progress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Please Wait...."
+            android:textAlignment="gravity"
+            android:textColor="#FFFFFF" />
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView3"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:srcCompat="@drawable/img"-->
+    <!--        tools:layout_editor_absoluteX="0dp"-->
+    <!--        tools:layout_editor_absoluteY="0dp" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>
