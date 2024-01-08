@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/goldman</item>
+        <item>@font/gruppo</item>
         <item>@font/josefin_sans_bold</item>
         <item>@font/junge</item>
     </array>

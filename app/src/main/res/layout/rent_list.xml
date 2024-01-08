@@ -9,38 +9,40 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#093C6B"
         android:orientation="horizontal"
-        android:padding="15dp"
+        android:paddingTop="20sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingBottom="10sp"
         app:flow_verticalAlign="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cardView">
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        android:weightSum="5">
 
-        <Button
-            android:id="@+id/previousButt"
-            android:layout_width="61dp"
-            android:layout_height="54dp"
-            android:layout_margin="10dp"
-            android:layout_marginEnd="20dp"
-            android:drawablePadding="10dp"
-
-            android:text="Here"
-            android:textSize="25sp" />
-
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="47dp"
+        <SearchView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/black"
-            android:text="logout"
+            android:background="@drawable/searchbar"
+            android:layout_marginEnd="10sp"
+            android:layout_weight="5" />
+
+
+        <Button
+            android:id="@+id/accountInfo"
+            android:layout_width="55sp"
+            android:layout_height="55sp"
+            android:layout_marginTop="-5sp"
+            android:layout_weight="0.1"
+
+            android:background="@drawable/baseline_account_circle_24"
             android:textColor="#FFFFFF" />
     </LinearLayout>
-
+<!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -67,15 +69,16 @@
                 android:src="@drawable/baseline_add_24"
                 android:tint="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/recycler1"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent" /> -->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler1"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>  -->

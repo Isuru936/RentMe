@@ -34,10 +34,10 @@ public class carAdapter extends FirebaseRecyclerAdapter<
                                     int position, @NonNull Car model) {
 
         if (model != null) {
-            holder.brand.setText(model.getBrand());
+//            holder.brand.setText(model.getBrand());
             holder.model.setText(model.getModel());
             holder.seats.setText(String.valueOf(model.getSeats()));
-            holder.price.setText(String.valueOf(model.getPrice()));
+            holder.price.setText("LKR "+String.valueOf(model.getPrice())+"/=");
 // Access the nested URL
             String imageURL = model.getImageURL();
             if (imageURL != null) {
@@ -73,7 +73,7 @@ public class carAdapter extends FirebaseRecyclerAdapter<
         public carViewHolder(@NonNull View itemView) {
             super(itemView);
             model = itemView.findViewById(R.id.listModel);
-            brand = itemView.findViewById(R.id.listBrand);
+//            brand = itemView.findViewById(R.id.list);
             seats = itemView.findViewById(R.id.listSeat);
             price = itemView.findViewById(R.id.listPrice);
 

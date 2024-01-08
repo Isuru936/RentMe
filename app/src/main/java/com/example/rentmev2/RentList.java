@@ -23,7 +23,7 @@ public class RentList extends AppCompatActivity {
 
 
     private carAdapter adapter;
-    Button logoutId;
+    Button accountInfo;
     FirebaseAuth auth;
     private DatabaseReference rentDB;
 
@@ -38,22 +38,22 @@ public class RentList extends AppCompatActivity {
         rentDB = FirebaseDatabase.getInstance().getReference();
         recyclerView = findViewById(R.id.recycler1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        logoutId = findViewById(R.id.logout);
+        accountInfo = findViewById(R.id.accountInfo);
 
         String userEmail = getIntent().getStringExtra("email");
 
 
-        fab = findViewById(R.id.fab);
+//        fab = findViewById(R.id.fab);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(RentList.this,UploadActivity.class);
-//                startActivity(intent);
-            }
-        });
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Intent intent = new Intent(RentList.this,UploadActivity.class);
+////                startActivity(intent);
+//            }
+//        });
 
-        logoutId.setOnClickListener(new View.OnClickListener() {
+        accountInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logout();
